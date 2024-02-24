@@ -1,3 +1,5 @@
+// it is wrong please fix this function
+
 const array = [1, 2, 3, 3, 3, 4, 2, 5, 5, 6, 6, 1, 1, 9, 9, 10, 10, 10, 10];
 
 const groupByRepeating = (array) => {
