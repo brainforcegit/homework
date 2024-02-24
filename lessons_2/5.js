@@ -1,5 +1,5 @@
 const object = {aa: 8, a: {b: {c: {d: {e: {k: 7333}}}}}};
-
+// use destructuring not function
 function getValueByKey(obj, key) {
   let objects = [];
   for (let i in obj) {
