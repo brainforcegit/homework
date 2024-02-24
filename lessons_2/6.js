@@ -1,5 +1,5 @@
 // it is wrong please fix this function
-
+// please use this array [1,2,5,5,6,7,6,8,5,6,10,10,11,12,11,13,13,13] for test
 const array = [1, 2, 3, 3, 3, 4, 2, 5, 5, 6, 6, 1, 1, 9, 9, 10, 10, 10, 10];
 
 const groupByRepeating = (array) => {
