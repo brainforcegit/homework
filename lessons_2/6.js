@@ -1,6 +1,4 @@
-// it is wrong please fix this function
-// please use this array [1,2,5,5,6,7,6,8,5,6,10,10,11,12,11,13,13,13] for test
-const array = [1, 2, 3, 3, 3, 4, 2, 5, 5, 6, 6, 1, 1, 9, 9, 10, 10, 10, 10];
+const array = [1, 2, 5, 5, 6, 7, 6, 8, 5, 6, 10, 10, 11, 12, 11, 13, 13, 13];
 
 const groupByRepeating = (array) => {
   return array.reduce((res, current) => {
@@ -13,17 +11,16 @@ const groupByRepeating = (array) => {
   }, {})
 }
 
-const findBigRepeatingNumber = (array) => {
-  let maxNum = 0;
-  let objRepeating = groupByRepeating(array)
+const findBigRepeatingNumber = (objRepeating) => {
+  let repeatingMaxArrayKeys = [];
   let maxRepeatingNumber = Math.max(...Object.values(objRepeating));
   let objKeys = Object.keys(objRepeating)
   for (let i = 0; i < objKeys.length; i++) {
-    maxNum = (objRepeating[objKeys[i]] === maxRepeatingNumber && objKeys[i] > maxNum) ? objKeys[i] : maxNum
-
+    if (objRepeating[objKeys[i]] === maxRepeatingNumber) {
+      repeatingMaxArrayKeys.push(objKeys[i])
+    }
   }
-
-  return maxNum
+  return Math.max(...repeatingMaxArrayKeys)
 }
 
-console.log(findBigRepeatingNumber(array));
+console.log(findBigRepeatingNumber(groupByRepeating(array)));
