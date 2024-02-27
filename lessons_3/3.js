@@ -9,6 +9,7 @@
 // "use strict"
 // var a = 10;
 //
+//
 // function foo() {
 //   console.log(this.a)
 // }
@@ -22,7 +23,18 @@
 
 // "use strict"
 //
-// function foo() {
-//   console.log(this)
-// }
+function foo(a) {
+    console.log(this.a);
+}
+
+
+// [1,2,3].forEach()
 // foo()
+
+const obj4 = {a: 'poxos'};
+obj4.foo = foo;
+
+obj4.foo(function() {
+    console.log(this, '-------')
+})
+
