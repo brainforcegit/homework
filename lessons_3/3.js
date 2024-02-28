@@ -26,3 +26,9 @@
 //   console.log(this)
 // }
 // foo()
+
+// todo
+// const obj = {};
+// const obj1 = new Object();
+// obj1.__proto__ === Object.prototype;
+// console.log(Object.prototype);
