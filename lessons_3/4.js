@@ -24,5 +24,7 @@ const isObject = (object) => {
   return object != null && typeof object === "object";
 };
 
-console.log(deepComparisonOfValue({a: 1, b: 2, c: {d: {}}}, {a: 1, b: 8, c: {d: {}}}));
+console.log(deepComparisonOfValue({a: 1, b: 2, c: {d: {}}}, {a: 1, b: 2, c: {d: {}}}));
 console.log(deepComparisonOfValue({a: 1, b: 6, c: {d: {}}}, {a: 1, b: 2, c: {d: {}}}));
+console.log(deepComparisonOfValue([1,2,{a: 'b', c: { s: { t: { name: 'Smith' } } }}], [1,2,{a: 'b', c: { s: { t: { name: 'Smith' } } }}]));
+
